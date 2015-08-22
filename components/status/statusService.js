@@ -3,11 +3,11 @@
   'use strict';
 
   angular
-    .module('statusApp')
+    .module('statusing')
     .factory('Status', StatusService);
 
   function StatusService($firebaseArray) {
-    var ref = new Firebase("https://statusapp.firebaseio.com/status");
+    var ref = new Firebase("https://statusing.firebaseio.com/status");
     return $firebaseArray(ref);
   }
 

@@ -5,23 +5,23 @@
   'use strict';
 
   angular
-    .module('statusApp')
+    .module('statusing')
     .factory('User', UserService);
 
   function UserService($firebaseObject) {
 
     function newUserRef(user) {
-      var ref = new Firebase("https://blazing-torch-2984.firebaseio.com//users/" + user.uid);
+      var ref = new Firebase("https://statusing.firebaseio.com//users/" + user.uid);
       return $firebaseObject(ref);
     }
 
     function getUserData(user) {
-      var ref = new Firebase("https://blazing-torch-2984.firebaseio.com//users/" + user);
+      var ref = new Firebase("https://statusing.firebaseio.com//users/" + user);
       return $firebaseObject(ref);
     }
 
     function getLoggedInUser() {
-      var user = localStorage.getItem('firebase:session::statusapp');
+      var user = localStorage.getItem('firebase:session::statusing');
       if(user) {
         return JSON.parse(user);
       }

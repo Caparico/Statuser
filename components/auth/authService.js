@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('statusApp')
+    .module('statusing')
     .factory('Auth', AuthService);
 
   function AuthService($firebaseAuth) {
-    var ref = new Firebase("https://blazing-torch-2984.firebaseio.com/");
+    var ref = new Firebase("https://statusing.firebaseio.com");
     return $firebaseAuth(ref);
   }
 

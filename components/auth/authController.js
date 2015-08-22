@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('statusApp')
+    .module('statusing')
     .controller('AuthController', AuthController);
 
   function AuthController(Auth, User, $state) {
