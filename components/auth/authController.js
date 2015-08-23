@@ -61,6 +61,10 @@
         console.log(error);
       });
     }
+    function logout() {        
+        Auth.$unauth();
+        $state.go('auth');
+    }
   }
 
 })();
